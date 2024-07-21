@@ -61,7 +61,8 @@ export default function App() {
   useEffect(function () {
     const fetchdata = async () => {
       try {
-        const res = await fetch("http://localhost:8000/questions");
+        // const res = await fetch("http://localhost:8000/questions");
+        const res = await fetch("fakeapi");
         const data = await res.json();
         dispatch({ type: "dataRecieved", payload: data });
         console.log(data);
